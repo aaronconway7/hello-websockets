@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://cdn.socket.io/4.0.0/socket.io.min.js"
+            integrity="sha384-DkkWv9oJFWLIydBXXjkBWnG1/fuVhw8YPBq37uvvD6WSYRFRqr21eY5Dg9ZhmWdy"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <title>Hello WebSockets 👋</title>
+    </head>
+    <body class="p-4 grid gap-4">
+        <h1>Hello WebSockets 👋</h1>
+        <div id="window" class="grid gap-2">
+            <div
+                id="chat"
+                class="grid auto-rows-max gap-2 p-4 bg-gray-100 border rounded h-56 overflow-y-auto"
+            >
+                <p id="feedback" class="text-sm italic opacity-50"></p>
+            </div>
+            <form id="message-form" class="grid gap-2">
+                <label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="username"
+                        class="w-full border p-2 rounded"
+                        required
+                    />
+                </label>
+                <label>
+                    <input
+                        type="text"
+                        id="message"
+                        name="message"
+                        placeholder="message..."
+                        class="w-full border p-2 rounded"
+                        required
+                    />
+                </label>
+                <button type="submit" class="border shadow p-2 rounded">
+                    Send
+                </button>
+            </form>
+        </div>
+        <script src="/chat.js"></script>
+    </body>
+</html>
